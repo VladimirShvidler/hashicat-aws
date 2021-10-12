@@ -15,6 +15,9 @@ resource "aws_instance"{
   tags = {
     name = "Department"
     value = "devops"
+
+    name = "Billable"
+    value = "true"
   }
 
 }
