@@ -11,6 +11,13 @@ provider "aws" {
   region  = var.region
 }
 
+resource "aws_instance"{
+  tags = {
+    name = "Department"
+    value = "devops"
+  }
+
+}
 resource "aws_vpc" "hashicat" {
   cidr_block           = var.address_space
   enable_dns_hostnames = true
